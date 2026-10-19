@@ -15,6 +15,27 @@ Il fournit une méthode de travail réutilisable à un assistant compatible avec
 
 L'analyse reste courte pour les décisions simples. Le skill n'est pas destiné aux corrections de texte, traductions ou questions factuelles isolées.
 
+## Rôles d'analyse
+
+Le skill mobilise des rôles complémentaires selon la question :
+
+| Rôle | Ce qu'il examine |
+| --- | --- |
+| Optimiste | Les opportunités, les forces et les conditions de réussite |
+| Analyste factuel | Les faits chiffrés ou qualitatifs, leurs sources et les inconnues |
+| Stratège | Le but à atteindre, les priorités, l'horizon et le coût d'opportunité |
+| Contradicteur | L'objection principale, les scénarios d'échec et l'alternative sérieuse |
+| Statisticien | Les données comparables, les taux de base, la variabilité et l'incertitude |
+| Arbitre | Le choix recommandé, les compromis et les conditions de révision |
+
+Pour une décision simple, deux ou trois angles utiles suffisent, arbitrage compris. Pour une décision importante, les rôles pertinents sont mobilisés ; l'examen statistique est ajouté si les données ou la question le justifient. Sans données adéquates, le skill doit dire que les chances de réussite ne sont pas estimables de manière fiable.
+
+Les rôles partagent les mêmes faits. L'arbitre pèse les arguments selon les preuves et les priorités, sans vote majoritaire ni consensus forcé. Les désaccords importants restent visibles. Plusieurs personas d'un même modèle ne sont pas plusieurs expertises indépendantes.
+
+Il s'agit d'une méthode d'examen, pas d'un dialogue théâtral ni d'un affichage du raisonnement interne détaillé. Par défaut, la réponse présente les conclusions utiles. Pour voir explicitement les contributions, demander :
+
+> Utilise $analyse-critique-decision pour analyser ce projet. Présente les apports des six rôles, puis la recommandation de l'arbitre. Ne chiffre les chances de réussite que si les données le permettent : [contexte].
+
 ## Installation dans Codex local
 
 ### macOS ou Linux
@@ -85,7 +106,7 @@ La réponse recherchée commence par une recommandation, explique les raisons et
 - Examiner plusieurs angles avec un seul assistant ne constitue pas une expertise indépendante de plusieurs professionnels.
 - Une méthode critique ne supprime pas les erreurs, les biais ou les informations manquantes.
 - Une recommandation ne vaut pas autorisation d'agir à l'extérieur de la conversation.
-- La validation initiale a couvert la structure du skill et un essai simple de comportement. Elle ne constitue pas une évaluation systématique de la qualité des décisions.
+- La validation a couvert la structure du skill, un essai simple de comportement et un scénario de lancement B2B mobilisant les six rôles (intérêt déclaré, absence de paiements et budget limité). Elle ne constitue pas une évaluation systématique de la qualité des décisions.
 
 ## Contenu du dépôt
 
